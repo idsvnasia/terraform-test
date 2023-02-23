@@ -9,8 +9,11 @@ module "my_vpc" {
 
 module "ec2" {
   source        = "../modules/ec2"
-  ec2_count     = "1"
-  ami_id        = "ami-0f767afb799f45102"
-  instance_type = "t2.micro"
+  ec2_count     = "4"
+  ami_id        = "ami-00712dae9a53f8c15"
+  instance_type = "t2.small"
   subnet_id     = "${module.my_vpc.subnet_id}"
 }
+
+
+
