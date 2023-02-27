@@ -11,7 +11,7 @@ module "ec2" {
   source        = "../modules/ec2"
   ec2_count     = "4"
   ami_id        = "ami-00712dae9a53f8c15"
-  instance_type = "t2.small"
+  instance_type = "t2.medium"
   subnet_id     = "${module.my_vpc.subnet_id}"
 }
 
